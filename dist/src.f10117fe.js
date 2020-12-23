@@ -100437,6 +100437,10 @@ function () {
     };
   }
 
+  User.prototype.markerContent = function () {
+    return "User name: " + this.name;
+  };
+
   return User;
 }();
 
