@@ -100492,9 +100492,11 @@ function () {
         lng: 0
       }
     });
-  }
+  } // Dengan menggunakan pipe typescript akan mencocokan property yang bisa di gunakan yaitu property yang sama.
+
 
   CustomMap.prototype.addMaker = function (user) {
+    // user.name - Tidak bisa karena company tidak memiliki property name
     new google.maps.Marker({
       map: this.googleMap,
       position: {
