@@ -13,7 +13,7 @@ export class CustomMap {
     });
   }
 
-  addUserMaker(user: User) {
+  addMaker(user: User | Company) {
     new google.maps.Marker({
       map: this.googleMap,
       position: {
@@ -23,13 +23,13 @@ export class CustomMap {
     });
   }
 
-  addCompanyMaker(company: Company) {
-    new google.maps.Marker({
-      map: this.googleMap,
-      position: {
-        lat: company.location.lat,
-        lng: company.location.lng,
-      },
-    });
-  }
+  // addCompanyMaker(company: Company) {
+  //   new google.maps.Marker({
+  //     map: this.googleMap,
+  //     position: {
+  //       lat: company.location.lat,
+  //       lng: company.location.lng,
+  //     },
+  //   });
+  // }
 }
