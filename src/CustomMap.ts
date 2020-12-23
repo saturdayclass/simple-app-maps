@@ -1,6 +1,3 @@
-import { User } from './User';
-import { Company } from './Company';
-
 interface Mappable {
   location: {
     lat: number;
