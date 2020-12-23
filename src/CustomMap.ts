@@ -1,5 +1,13 @@
 import { User } from './User';
 import { Company } from './Company';
+
+interface Mappable {
+  location: {
+    lat: number;
+    lng: number;
+  };
+}
+
 export class CustomMap {
   private googleMap: google.maps.Map;
 
@@ -14,7 +22,7 @@ export class CustomMap {
   }
 
   // Dengan menggunakan pipe typescript akan mencocokan property yang bisa di gunakan yaitu property yang sama.
-  addMaker(mappable: User | Company) {
+  addMaker(mappable: Mappable) {
     // user.name - Tidak bisa karena company tidak memiliki property name
     new google.maps.Marker({
       map: this.googleMap,
