@@ -2,6 +2,9 @@ import { User } from './User';
 import { Company } from './Company';
 import { CustomMap } from './CustomMap';
 
-const mapDiv = document.getElementById('map');
+const user = new User();
+const company = new Company();
+const customMap = new CustomMap('map');
 
-new CustomMap(mapDiv);
+customMap.addUserMaker(user);
+customMap.addCompanyMaker(company);
