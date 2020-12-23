@@ -14,13 +14,13 @@ export class CustomMap {
   }
 
   // Dengan menggunakan pipe typescript akan mencocokan property yang bisa di gunakan yaitu property yang sama.
-  addMaker(user: User | Company) {
+  addMaker(mappable: User | Company) {
     // user.name - Tidak bisa karena company tidak memiliki property name
     new google.maps.Marker({
       map: this.googleMap,
       position: {
-        lat: user.location.lat,
-        lng: user.location.lng,
+        lat: mappable.location.lat,
+        lng: mappable.location.lng,
       },
     });
   }
