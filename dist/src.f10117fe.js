@@ -100496,13 +100496,21 @@ function () {
 
 
   CustomMap.prototype.addMaker = function (mappable) {
-    // user.name - Tidak bisa karena company tidak memiliki property name
-    new google.maps.Marker({
+    var _this = this; // user.name - Tidak bisa karena company tidak memiliki property name
+
+
+    var marker = new google.maps.Marker({
       map: this.googleMap,
       position: {
         lat: mappable.location.lat,
         lng: mappable.location.lng
       }
+    });
+    marker.addListener('click', function () {
+      var infoWindow = new google.maps.InfoWindow({
+        content: 'H'
+      });
+      infoWindow.open(_this.googleMap, marker);
     });
   };
 
