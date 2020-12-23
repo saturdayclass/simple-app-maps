@@ -100516,7 +100516,7 @@ function () {
     });
     marker.addListener('click', function () {
       var infoWindow = new google.maps.InfoWindow({
-        content: 'H'
+        content: mappable.markerContent()
       });
       infoWindow.open(_this.googleMap, marker);
     });
