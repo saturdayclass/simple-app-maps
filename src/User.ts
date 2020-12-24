@@ -1,5 +1,6 @@
 import faker from 'faker';
-export class User {
+import { Mappable } from "./customMap";
+export class User implements Mappable{
   name: string;
   location: {
     lat: number;
